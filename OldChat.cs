@@ -16,5 +16,15 @@ namespace Mehrak
         {
             InitializeComponent();
         }
+
+        private void closeWindow_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void minWindow_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }
