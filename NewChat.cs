@@ -29,7 +29,8 @@ namespace Mehrak
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-
+            SaveAs saveAs = new SaveAs();
+            saveAs.ShowDialog();
         }
     }
 }

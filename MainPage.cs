@@ -19,7 +19,12 @@ namespace Mehrak
 
         private void newChat_Click(object sender, EventArgs e)
         {
-
+            NewChat newChat = new NewChat();
+            newChat.Dock = DockStyle.Fill;
+            newChat.TopLevel = false;
+            MainForm.MainPanel.Controls.Clear();
+            MainForm.MainPanel.Controls.Add(newChat);
+            newChat.Show();
         }
 
         private void minWindow_Click(object sender, EventArgs e)
@@ -27,9 +32,14 @@ namespace Mehrak
             WindowState = FormWindowState.Minimized;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void oldChat_Click(object sender, EventArgs e)
         {
-            
+            OldChat oldChat = new OldChat();
+            oldChat.Dock = DockStyle.Fill;
+            oldChat.TopLevel = false;
+            MainForm.MainPanel.Controls.Clear();
+            MainForm.MainPanel.Controls.Add(oldChat);
+            oldChat.Show();
         }
 
         private void closeWindow_Click(object sender, EventArgs e)

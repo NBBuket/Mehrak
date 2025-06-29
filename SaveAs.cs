@@ -26,5 +26,10 @@ namespace Mehrak
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chat Saved!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

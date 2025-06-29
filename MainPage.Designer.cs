@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.oldChat = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.minWindow = new System.Windows.Forms.Button();
             this.closeWindow = new System.Windows.Forms.Button();
@@ -45,7 +45,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(85)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(447, 93);
+            this.button1.Location = new System.Drawing.Point(440, 93);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(169, 175);
             this.button1.TabIndex = 0;
@@ -53,38 +53,39 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.newChat_Click);
             // 
-            // button2
+            // oldChat
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(252)))), ((int)(((byte)(92)))));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(85)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(136, 93);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(169, 175);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "OLD CHATS";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.oldChat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(252)))), ((int)(((byte)(92)))));
+            this.oldChat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.oldChat.FlatAppearance.BorderSize = 0;
+            this.oldChat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.oldChat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(85)))), ((int)(((byte)(0)))));
+            this.oldChat.Location = new System.Drawing.Point(121, 93);
+            this.oldChat.Name = "oldChat";
+            this.oldChat.Size = new System.Drawing.Size(169, 175);
+            this.oldChat.TabIndex = 1;
+            this.oldChat.Text = "OLD CHATS";
+            this.oldChat.UseVisualStyleBackColor = false;
+            this.oldChat.Click += new System.EventHandler(this.oldChat_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(179)))), ((int)(((byte)(128)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.oldChat);
             this.panel1.Controls.Add(this.button1);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(179)))), ((int)(((byte)(128)))));
-            this.panel1.Location = new System.Drawing.Point(26, 30);
+            this.panel1.Location = new System.Drawing.Point(29, 39);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(742, 394);
+            this.panel1.Size = new System.Drawing.Size(742, 388);
             this.panel1.TabIndex = 2;
             // 
             // minWindow
             // 
+            this.minWindow.FlatAppearance.BorderSize = 0;
             this.minWindow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(64)))));
-            this.minWindow.Location = new System.Drawing.Point(683, 0);
+            this.minWindow.Location = new System.Drawing.Point(686, 12);
             this.minWindow.Name = "minWindow";
             this.minWindow.Size = new System.Drawing.Size(39, 24);
             this.minWindow.TabIndex = 2;
@@ -94,8 +95,9 @@
             // 
             // closeWindow
             // 
+            this.closeWindow.FlatAppearance.BorderSize = 0;
             this.closeWindow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(64)))));
-            this.closeWindow.Location = new System.Drawing.Point(728, 0);
+            this.closeWindow.Location = new System.Drawing.Point(732, 12);
             this.closeWindow.Name = "closeWindow";
             this.closeWindow.Size = new System.Drawing.Size(39, 24);
             this.closeWindow.TabIndex = 3;
@@ -109,10 +111,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(135)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(790, 445);
+            this.ClientSize = new System.Drawing.Size(800, 456);
             this.Controls.Add(this.closeWindow);
             this.Controls.Add(this.minWindow);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainPage";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
@@ -123,7 +126,7 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button oldChat;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button minWindow;
         private System.Windows.Forms.Button closeWindow;
