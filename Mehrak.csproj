@@ -52,56 +52,58 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.cs">
+    <Compile Include="frmMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainPage.Designer.cs">
-      <DependentUpon>MainPage.cs</DependentUpon>
+    <Compile Include="frmMainMenu.Designer.cs">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewChat.cs">
+    <Compile Include="frmNewChat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewChat.Designer.cs">
-      <DependentUpon>NewChat.cs</DependentUpon>
+    <Compile Include="frmNewChat.Designer.cs">
+      <DependentUpon>frmNewChat.cs</DependentUpon>
     </Compile>
-    <Compile Include="OldChat.cs">
+    <Compile Include="frmOldChats.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OldChat.Designer.cs">
-      <DependentUpon>OldChat.cs</DependentUpon>
+    <Compile Include="frmOldChats.Designer.cs">
+      <DependentUpon>frmOldChats.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SaveAs.cs">
+    <Compile Include="frmSaveAs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SaveAs.Designer.cs">
-      <DependentUpon>SaveAs.cs</DependentUpon>
+    <Compile Include="frmSaveAs.Designer.cs">
+      <DependentUpon>frmSaveAs.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowFormsOnPanel.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainPage.resx">
-      <DependentUpon>MainPage.cs</DependentUpon>
+    <EmbeddedResource Include="frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewChat.resx">
-      <DependentUpon>NewChat.cs</DependentUpon>
+    <EmbeddedResource Include="frmNewChat.resx">
+      <DependentUpon>frmNewChat.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="OldChat.resx">
-      <DependentUpon>OldChat.cs</DependentUpon>
+    <EmbeddedResource Include="frmOldChats.resx">
+      <DependentUpon>frmOldChats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SaveAs.resx">
-      <DependentUpon>SaveAs.cs</DependentUpon>
+    <EmbeddedResource Include="frmSaveAs.resx">
+      <DependentUpon>frmSaveAs.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -124,6 +126,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bookmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\BackButtonImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
