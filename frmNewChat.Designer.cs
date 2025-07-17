@@ -33,8 +33,10 @@ namespace Mehrak
             this.txtNewText = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.pboxMehrakBg = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pboxMehrakBg)).BeginInit();
+            this.pboxMehrakBg.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtNewText
@@ -70,6 +72,7 @@ namespace Mehrak
             // pboxMehrakBg
             // 
             this.pboxMehrakBg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pboxMehrakBg.Controls.Add(this.panel1);
             this.pboxMehrakBg.Location = new System.Drawing.Point(25, 40);
             this.pboxMehrakBg.Name = "pboxMehrakBg";
             this.pboxMehrakBg.Size = new System.Drawing.Size(850, 545);
@@ -77,6 +80,15 @@ namespace Mehrak
             this.pboxMehrakBg.TabIndex = 1;
             this.pboxMehrakBg.TabStop = false;
             this.pboxMehrakBg.Paint += new System.Windows.Forms.PaintEventHandler(this.PictureBox_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Location = new System.Drawing.Point(66, 30);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(717, 483);
+            this.panel1.TabIndex = 9;
             // 
             // btnSave
             // 
@@ -111,6 +123,7 @@ namespace Mehrak
             this.Name = "frmNewChat";
             this.Text = "NewChat";
             ((System.ComponentModel.ISupportInitialize)(this.pboxMehrakBg)).EndInit();
+            this.pboxMehrakBg.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,5 +134,6 @@ namespace Mehrak
         private System.Windows.Forms.TextBox txtNewText;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.PictureBox pboxMehrakBg;
+        private System.Windows.Forms.Panel panel1;
     }
 }
