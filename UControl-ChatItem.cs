@@ -99,11 +99,11 @@ namespace Mehrak.UserControls
             beeps.Add(3, "beep boop!");
             beeps.Add(4, "beep boop...");
             beeps.Add(5, "beep beep");
-            beeps.Add(6, "...");
+            beeps.Add(6, "boop beep boob");
             beeps.Add(7, "boop boop");
-            beeps.Add(8, "boop beep boob");
+            beeps.Add(8, "...");
             Random Random = new Random();
-            return beeps[Random.Next(7)];
+            return beeps[Random.Next(9)];
         }
 
         public Image MehraksStickers(string charName)
