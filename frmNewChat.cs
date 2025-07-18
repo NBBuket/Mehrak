@@ -43,8 +43,66 @@ namespace Mehrak
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            frmSaveAs saveAs = new frmSaveAs();
-            saveAs.ShowDialog();
+            List<string> allTexts = new List<string>();
+
+            foreach (Control control in panel1.Controls)
+            {
+                if (control is UserControl userControl)
+                {
+                    foreach (Control subControl in userControl.Controls)
+                    {
+                        if (subControl is Panel panel)
+                        {
+                            foreach (Control panelControl in panel.Controls)
+                            {
+                                if (panelControl is System.Windows.Forms.TextBox textBox)
+                                {
+                                    allTexts.Add(textBox.Text);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            allTexts.Reverse();
+            for (int i = 0; i < allTexts.Count; i++)
+            {
+                string prefix = (i + 1) % 2 == 1 ? "-" : "+";
+                allTexts[i] = $"{prefix} {allTexts[i]}";
+            }
+            SaveTextsToFile(allTexts);
+        }
+
+        private void SaveTextsToFile(List<string> texts)
+        {
+            try
+            {
+                string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                string folderName = "MehrakChats";
+                string fullFolderPath = Path.Combine(documentsPath, folderName);
+
+                if (!Directory.Exists(fullFolderPath))
+                {
+                    Directory.CreateDirectory(fullFolderPath);
+                }
+
+                using (SaveFileDialog saveDialog = new SaveFileDialog())
+                {
+                    saveDialog.Filter = "Text files (*.txt)|*.txt";
+                    saveDialog.DefaultExt = "txt";
+                    saveDialog.InitialDirectory = fullFolderPath;
+
+                    if (saveDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        File.WriteAllLines(saveDialog.FileName, texts);
+                        MessageBox.Show("File saved successfully!");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving file: {ex.Message}");
+            }
         }
 
         private void PictureBox_Paint(object sender, PaintEventArgs e)

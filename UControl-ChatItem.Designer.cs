@@ -62,7 +62,7 @@
             this.bodyTextBox.ReadOnly = true;
             this.bodyTextBox.Size = new System.Drawing.Size(353, 30);
             this.bodyTextBox.TabIndex = 4;
-            this.bodyTextBox.Text = "Hello there. This is a test for the longer word usage.";
+            this.bodyTextBox.Text = "Mehrak sent a sticker to you!";
             // 
             // authorLabel
             // 
