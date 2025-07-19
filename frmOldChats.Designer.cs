@@ -30,12 +30,12 @@
         {
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlChatList = new System.Windows.Forms.Panel();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.pnlButtons = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.pboxKaveh = new System.Windows.Forms.PictureBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnReload = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.pnlMain.SuspendLayout();
             this.pnlChatList.SuspendLayout();
             this.pnlButtons.SuspendLayout();
@@ -59,19 +59,12 @@
             // 
             this.pnlChatList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(209)))), ((int)(((byte)(190)))));
             this.pnlChatList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pnlChatList.Controls.Add(this.vScrollBar1);
+            this.pnlChatList.Controls.Add(this.listBox1);
             this.pnlChatList.Location = new System.Drawing.Point(21, 25);
             this.pnlChatList.Margin = new System.Windows.Forms.Padding(2);
             this.pnlChatList.Name = "pnlChatList";
             this.pnlChatList.Size = new System.Drawing.Size(466, 468);
             this.pnlChatList.TabIndex = 1;
-            // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Location = new System.Drawing.Point(449, 0);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(17, 468);
-            this.vScrollBar1.TabIndex = 4;
             // 
             // pnlButtons
             // 
@@ -85,6 +78,19 @@
             this.pnlButtons.Name = "pnlButtons";
             this.pnlButtons.Size = new System.Drawing.Size(290, 468);
             this.pnlButtons.TabIndex = 0;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold);
+            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(85)))), ((int)(((byte)(0)))));
+            this.btnBack.Location = new System.Drawing.Point(36, 406);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(218, 41);
+            this.btnBack.TabIndex = 4;
+            this.btnBack.Text = "Main Menu";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // pboxKaveh
             // 
@@ -124,18 +130,18 @@
             this.btnReload.UseVisualStyleBackColor = true;
             this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
-            // btnBack
+            // listBox1
             // 
-            this.btnBack.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold);
-            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(85)))), ((int)(((byte)(0)))));
-            this.btnBack.Location = new System.Drawing.Point(36, 406);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(218, 41);
-            this.btnBack.TabIndex = 4;
-            this.btnBack.Text = "Main Menu";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(209)))), ((int)(((byte)(190)))));
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.Font = new System.Drawing.Font("Times New Roman", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.listBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(85)))), ((int)(((byte)(0)))));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 31;
+            this.listBox1.Location = new System.Drawing.Point(0, 3);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(348, 434);
+            this.listBox1.TabIndex = 17;
             // 
             // frmOldChats
             // 
@@ -148,6 +154,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmOldChats";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.frmOldChats_Load);
             this.pnlMain.ResumeLayout(false);
             this.pnlChatList.ResumeLayout(false);
             this.pnlButtons.ResumeLayout(false);
@@ -162,8 +169,8 @@
         private System.Windows.Forms.Panel pnlChatList;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnReload;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.PictureBox pboxKaveh;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
