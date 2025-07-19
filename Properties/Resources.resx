@@ -130,4 +130,97 @@
   <data name="BackButtonImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BackButtonImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="alhaitham_brain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\alhaitham-brain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Alhaitham_overwhelmed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\Alhaitham-overwhelmed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="candace_celebration" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\candace-celebration.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="candace_pray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\candace-pray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="collei_study" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\collei-study.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="collei_yearning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\collei-yearning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cyno_fight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\cyno-fight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cyno_tcg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\cyno-tcg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dehya_confident" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\dehya-confident.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dehya_flowers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\dehya-flowers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dori_evil_smile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\dori-evil-smile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dori_mora" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\dori-mora.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="faruzan_confident" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\faruzan-confident.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="faruzan_welcome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\faruzan-welcome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hilichurls" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\Hilichurls.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kaveh_and_mehrak" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\kaveh-and-mehrak.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kaveh_inviting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\kaveh-inviting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kaveh_job_hunting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\kaveh-job-hunting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="layla_encouragement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\layla-encouragement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="layla_sleep_study" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\layla-sleep-study.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="morax" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\morax.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nahida_excited" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\nahida-excited.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nahida_wink" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\nahida-wink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nilou_dancing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\nilou-dancing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nilou_princess" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\nilou-princess.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paimon_fungi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\paimon-fungi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sethos_silly" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\sethos-silly.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sethos_study" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\sethos-study.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tighnari_flower" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\tighnari-flower.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tighnari_invite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\tighnari-invite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zhongli" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stickers\zhongli.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -7,18 +7,73 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections.ObjectModel;
 
 namespace Mehrak.UserControls
 {
     public partial class ChatItem : UserControl
     {
         public IChatModel ChatModel { get; set; }
+        public static readonly Dictionary<string, Image> Boops = new Dictionary<string, Image>
+        {
+            {"Alhaitham", global::Mehrak.Properties.Resources.alhaitham_brain},
+            {"Haitham", global::Mehrak.Properties.Resources.Alhaitham_overwhelmed},
+            {"Candace", global::Mehrak.Properties.Resources.candace_celebration},
+            {"CANDACE", global::Mehrak.Properties.Resources.candace_pray},
+            {"Collei", global::Mehrak.Properties.Resources.collei_study},
+            {"COLLEİ", global::Mehrak.Properties.Resources.collei_yearning},
+            {"Cyno", global::Mehrak.Properties.Resources.cyno_fight},
+            {"CYNO", global::Mehrak.Properties.Resources.cyno_tcg},
+            {"Dehya", global::Mehrak.Properties.Resources.dehya_flowers},
+            {"DEHYA", global::Mehrak.Properties.Resources.dehya_confident},
+            {"Dori", global::Mehrak.Properties.Resources.dori_evil_smile},
+            {"DORİ", global::Mehrak.Properties.Resources.dori_mora},
+            {"Faruzan", global::Mehrak.Properties.Resources.faruzan_confident},
+            {"FARUZAN", global::Mehrak.Properties.Resources.faruzan_welcome},
+            {"Kaveh", global::Mehrak.Properties.Resources.kaveh_inviting},
+            {"KAVEH", global::Mehrak.Properties.Resources.kaveh_job_hunting},
+            {"Layla", global::Mehrak.Properties.Resources.layla_encouragement},
+            {"LAYLA", global::Mehrak.Properties.Resources.layla_sleep_study},
+            {"Nahida", global::Mehrak.Properties.Resources.nahida_excited},
+            {"NAHİDA", global::Mehrak.Properties.Resources.nahida_wink},
+            {"Nilou", global::Mehrak.Properties.Resources.nilou_dancing},
+            {"NİLOU", global::Mehrak.Properties.Resources.nilou_princess},
+            {"Sethos", global::Mehrak.Properties.Resources.sethos_silly},
+            {"SETHOS", global::Mehrak.Properties.Resources.sethos_study},
+            {"Nari", global::Mehrak.Properties.Resources.tighnari_flower},
+            {"Tighnari", global::Mehrak.Properties.Resources.tighnari_invite},
+            {"Hilichurl", global::Mehrak.Properties.Resources.Hilichurls},
+            {"kaveh-mehrak", global::Mehrak.Properties.Resources.kaveh_and_mehrak},
+            {"Morax", global::Mehrak.Properties.Resources.morax},
+            {"Paimon", global::Mehrak.Properties.Resources.paimon_fungi},
+            {"Zhongli", global::Mehrak.Properties.Resources.zhongli}
+        };
+
+        public static readonly Dictionary<int, string> Beeps = new Dictionary<int, string> {
+            {0, "beep... boop..."},
+            {1, "beep"},
+            {2, "boop"},
+            {3, "beep boop!"},
+            {4, "beep boop..."},
+            {5, "beep beep"},
+            {6, "boop beep boob"},
+            {7, "boop boop"},
+            {8, "..."}
+        
+        };
+
         public ChatItem()
         {
             InitializeComponent();
         }
 
-        public ChatItem(IChatModel chatModel, bool isSumeru)
+        /// <summary>
+        /// Creating new chats
+        /// </summary>
+        /// <param name="chatModel"></param>
+        /// <param name="isSumeru"></param>
+        /// <param name="charName"></param>
+        public ChatItem(IChatModel chatModel, bool isSumeru, string charName)
         {
             InitializeComponent();
 
@@ -29,7 +84,7 @@ namespace Mehrak.UserControls
                     chatModel = new ImageChatModel()
                     {
                         Author = "Mehrak",
-                        Image = MehraksStickers("Cyno"),
+                        Image = MehraksStickers(charName),
                         ImageName = "Sticker",
                         Inbound = true,
                         Read = true,
@@ -87,47 +142,98 @@ namespace Mehrak.UserControls
         }
 
         /// <summary>
-        /// buraya istediğin kadar text eklemesi yapabilirsin
+        /// For showing old chats
+        /// </summary>
+        /// <param name="chatModel"></param>
+        /// <param name="isSumeru"></param>
+        /// <param name="charName"></param>
+        /// <param name="isMehrak"></param>
+        public ChatItem(IChatModel chatModel, bool isSumeru, string charName, bool isMehrak)
+        {
+            InitializeComponent();
+
+            if (isMehrak)
+            {
+                if (isSumeru)
+                {
+                    chatModel = new ImageChatModel()
+                    {
+                        Author = "Mehrak",
+                        Image = MehraksStickers(charName),
+                        ImageName = "Sticker",
+                        Inbound = true,
+                        Read = true,
+                        Time = DateTime.Now,
+                    };
+                }
+                chatModel.Inbound = true;
+            }
+
+            ChatModel = chatModel;
+
+            if (chatModel.Inbound) //Mehrakın cevapları
+            {
+                bodyPanel.Dock = DockStyle.Left;
+                authorLabel.Dock = DockStyle.Left;
+                bodyPanel.BackColor = Color.FromArgb(167, 252, 92);
+                bodyTextBox.BackColor = Color.FromArgb(167, 252, 92);
+                bodyTextBox.ForeColor = Color.FromArgb(152, 135, 64);
+            }
+            else //Ganbunun mesajları
+            {
+                bodyPanel.Dock = DockStyle.Right;
+                authorLabel.Dock = DockStyle.Right;
+                bodyTextBox.TextAlign = HorizontalAlignment.Right;
+                bodyPanel.BackColor = Color.FromArgb(12, 85, 0);
+                bodyTextBox.BackColor = Color.FromArgb(12, 85, 0);
+                bodyTextBox.ForeColor = Color.FromArgb(214, 204, 125);
+            }
+
+            authorLabel.Text = $"{chatModel.Author ?? "Ganbu"}, {chatModel.Time.ToShortTimeString()}";
+
+            switch (chatModel.Type)
+            {
+                case "text":
+                    var textmodel = chatModel as TextChatModel;
+                    bodyTextBox.Text = textmodel.Body.Trim();
+                    break;
+                case "image":
+                    var imagemodel = chatModel as ImageChatModel;
+                    bodyTextBox.Visible = false;
+                    bodyPanel.BackgroundImage = imagemodel.Image;
+                    bodyPanel.BackColor = Color.GhostWhite;
+                    bodyPanel.BackgroundImageLayout = ImageLayout.Stretch;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
+        /// <summary>
+        /// Mehraks boops and beeps
         /// </summary>
         /// <returns></returns>
         public string WhatMehrakSaid()
         {
-            Dictionary<int, string> beeps = new Dictionary<int, string>();
-            beeps.Add(0, "beep... boop...");
-            beeps.Add(1, "beep");
-            beeps.Add(2, "boop");
-            beeps.Add(3, "beep boop!");
-            beeps.Add(4, "beep boop...");
-            beeps.Add(5, "beep beep");
-            beeps.Add(6, "boop beep boob");
-            beeps.Add(7, "boop boop");
-            beeps.Add(8, "...");
             Random Random = new Random();
-            return beeps[Random.Next(9)];
+            return Beeps[Random.Next(9)];
         }
 
         public Image MehraksStickers(string charName)
         {
-            Dictionary<string, Image> boops = new Dictionary<string, Image>();
-            boops.Add("Kaveh", global::Mehrak.Properties.Resources.mehrakBackground);
-            boops.Add("Cyno", global::Mehrak.Properties.Resources.BackButtonImage);
-            boops.Add("Nari", global::Mehrak.Properties.Resources.bookmark);
-            if(charName == "Kaveh")
+            if (Boops.ContainsKey(charName))
             {
-                return boops["Kaveh"];
-            } 
-            else if(charName == "Cyno")
-            {
-                return boops["Cyno"];
+                return Boops[charName];
             }
             else
             {
-                return boops["Nari"];
+                return Boops["kaveh-mehrak"];
             }
         }
 
         /// <summary>
-        /// Buralara hiç dokunmayalım olduğu gibi aldım kodu valla ve çok da anlamaya uğraşmadım, anladıysan sen yazarsın<3
+        /// I dont know how this works, DO NOT TOUCH IT WORKS
         /// </summary>
         /// <param name="maxwidth"></param>
 
@@ -179,12 +285,8 @@ namespace Mehrak.UserControls
                 var gfx = this.CreateGraphics();
                 int lines = 1;
                 double stringwidth = gfx.MeasureString(body, bodyTextBox.Font).Width;
-
-                //The system is as follows. The box width can only go to MaxWidth, if it goes to MaxWidth, then wordwrap will bring the text down to a new line.
-                //In order to fit it, we'll need to adjust the height by a certain amount of units.
                 if (stringwidth < maxwidth + bodyPanel.Width - bodyTextBox.Width)
                 {
-                    //This is great, we can set the width to be a small as the actual text.
                     bodyPanel.Width = (int)(stringwidth + bodyPanel.Width - bodyTextBox.Width + 5);
                 }
                 else
@@ -213,8 +315,6 @@ namespace Mehrak.UserControls
                         lines++;
                     }
                 }
-
-                //Adjusts the height based on the number of lines.
                 Height = (lines * fontheight) + Height - bodyTextBox.Height;
             }
         }

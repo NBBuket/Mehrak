@@ -19,6 +19,11 @@ namespace Mehrak
     {
         private Image backgroundImage;
         private bool isSumeru = false;
+        private string Sumerulu = string.Empty;
+        List<string> SumeruluList = new List<string> { "Alhaitham", "Candace", "Collei", "Cyno", "Dehya", "Dori", 
+            "Faruzan", "Kaveh", "Layla","Nahida", "Nilou", "Sethos", "Nari", "Tighnari", "Haitham", "Zhongli", 
+            "Morax", "Paimon", "Hilichrul" };
+
         public frmNewChat()
         {
             backgroundImage = global::Mehrak.Properties.Resources.mehrakBackground;
@@ -78,7 +83,7 @@ namespace Mehrak
             try
             {
                 string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                string folderName = "MehrakChats";
+                string folderName = "Chats With Mehrak";
                 string fullFolderPath = Path.Combine(documentsPath, folderName);
 
                 if (!Directory.Exists(fullFolderPath))
@@ -131,7 +136,7 @@ namespace Mehrak
         {
             if (isSumeru)
             {
-                var chatItem1 = new ChatItem(message, true);
+                var chatItem1 = new ChatItem(message, true, Sumerulu);
                 chatItem1.Name = "chatItem" + panel1.Controls.Count;
                 chatItem1.Dock = DockStyle.Top;
                 panel1.Controls.Add(chatItem1);
@@ -143,7 +148,7 @@ namespace Mehrak
             }
             else
             {
-                var chatItem = new ChatItem(message, false);
+                var chatItem = new ChatItem(message, false, "");
                 chatItem.Name = "chatItem" + panel1.Controls.Count;
                 chatItem.Dock = DockStyle.Top;
                 panel1.Controls.Add(chatItem);
@@ -162,7 +167,7 @@ namespace Mehrak
         async void SendMessage()
         {
             string chatmessage = txtNewText.Text;
-            if (chatmessage.Contains("cyno") )
+            if (hasSumeruNames(chatmessage))
             {
                 isSumeru = true;
             }
@@ -206,8 +211,24 @@ namespace Mehrak
             }
         }
 
-        //dictionary ekle - stickerları içersin //her karakter için ayrı ayrı olabilir - random fonksiyonuyla seçeriz bunu       
-        //şimdilik mehrakın verdiği cevaplar okey duruyor
+        private bool hasSumeruNames(string text)
+        {
+            string firstFound = SumeruluList.FirstOrDefault(item =>
+               text.ToLower().Contains(item.ToLower()));
+           
+            if(firstFound != null)
+            {
+                Random random = new Random();
+                bool choice = random.Next(2) == 0;
+                if (choice)
+                {
+                    firstFound = firstFound.ToUpper();
+                }
+                Sumerulu = firstFound;
+                return true;
+            }else
+                return false;
+        }
         
         #endregion
     }

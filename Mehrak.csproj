@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChatModels.cs" />
+    <Compile Include="frmShowChats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowChats.Designer.cs">
+      <DependentUpon>frmShowChats.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,19 +77,13 @@
     <Compile Include="frmOldChats.Designer.cs">
       <DependentUpon>frmOldChats.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="frmSaveAs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSaveAs.Designer.cs">
-      <DependentUpon>frmSaveAs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShowFormsOnPanel.cs" />
     <Compile Include="UControl-ChatItem.cs">
       <SubType>UserControl</SubType>
@@ -91,6 +91,10 @@
     <Compile Include="UControl-ChatItem.Designer.cs">
       <DependentUpon>UControl-ChatItem.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmShowChats.resx">
+      <DependentUpon>frmShowChats.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,9 +112,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmSaveAs.resx">
-      <DependentUpon>frmSaveAs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UControl-ChatItem.resx">
       <DependentUpon>UControl-ChatItem.cs</DependentUpon>
@@ -139,6 +140,37 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\BackButtonImage.png" />
+    <Content Include="Resources\Stickers\alhaitham-brain.png" />
+    <Content Include="Resources\Stickers\Alhaitham-overwhelmed.png" />
+    <Content Include="Resources\Stickers\candace-celebration.png" />
+    <Content Include="Resources\Stickers\candace-pray.png" />
+    <Content Include="Resources\Stickers\collei-study.png" />
+    <Content Include="Resources\Stickers\collei-yearning.png" />
+    <Content Include="Resources\Stickers\cyno-fight.png" />
+    <Content Include="Resources\Stickers\cyno-tcg.png" />
+    <Content Include="Resources\Stickers\dehya-confident.png" />
+    <Content Include="Resources\Stickers\dehya-flowers.png" />
+    <Content Include="Resources\Stickers\dori-evil-smile.png" />
+    <Content Include="Resources\Stickers\dori-mora.png" />
+    <Content Include="Resources\Stickers\faruzan-confident.png" />
+    <Content Include="Resources\Stickers\faruzan-welcome.png" />
+    <Content Include="Resources\Stickers\Hilichurls.png" />
+    <Content Include="Resources\Stickers\kaveh-and-mehrak.png" />
+    <Content Include="Resources\Stickers\kaveh-inviting.png" />
+    <Content Include="Resources\Stickers\kaveh-job-hunting.png" />
+    <Content Include="Resources\Stickers\layla-encouragement.png" />
+    <Content Include="Resources\Stickers\layla-sleep-study.png" />
+    <Content Include="Resources\Stickers\morax.png" />
+    <Content Include="Resources\Stickers\nahida-excited.png" />
+    <Content Include="Resources\Stickers\nahida-wink.png" />
+    <Content Include="Resources\Stickers\nilou-dancing.png" />
+    <Content Include="Resources\Stickers\nilou-princess.png" />
+    <Content Include="Resources\Stickers\paimon-fungi.png" />
+    <Content Include="Resources\Stickers\sethos-silly.png" />
+    <Content Include="Resources\Stickers\sethos-study.png" />
+    <Content Include="Resources\Stickers\tighnari-flower.png" />
+    <Content Include="Resources\Stickers\tighnari-invite.png" />
+    <Content Include="Resources\Stickers\zhongli.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
