@@ -41,7 +41,7 @@ namespace Mehrak.UserControls
             {"Sethos", global::Mehrak.Properties.Resources.sethos_silly},
             {"SETHOS", global::Mehrak.Properties.Resources.sethos_study},
             {"Nari", global::Mehrak.Properties.Resources.tighnari_flower},
-            {"Tighnari", global::Mehrak.Properties.Resources.tighnari_invite},
+            {"NARİ", global::Mehrak.Properties.Resources.tighnari_invite},
             {"Hilichurl", global::Mehrak.Properties.Resources.Hilichurls},
             {"kaveh-mehrak", global::Mehrak.Properties.Resources.kaveh_and_mehrak},
             {"Morax", global::Mehrak.Properties.Resources.morax},
