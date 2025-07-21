@@ -30,6 +30,7 @@ namespace Mehrak
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmShowChats));
             this.pboxMehrakBg = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlTop = new System.Windows.Forms.Panel();
@@ -135,9 +136,10 @@ namespace Mehrak
             this.Controls.Add(this.pboxMehrakBg);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmShowChats";
-            this.Text = "Saved Chat";
+            this.Text = "Saved Chat - Mehrak";
             this.Load += new System.EventHandler(this.frmShowChats_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pboxMehrakBg)).EndInit();
             this.pboxMehrakBg.ResumeLayout(false);

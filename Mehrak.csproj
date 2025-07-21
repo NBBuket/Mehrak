@@ -49,7 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>export.ico</ApplicationIcon>
+    <ApplicationIcon>mehrak.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>B90D5EFC187EFB310A7C1B5299A2DD28A6A9BD3A</ManifestCertificateThumbprint>
@@ -172,6 +172,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="export.ico" />
+    <Content Include="mehrak.ico" />
     <Content Include="Resources\BackButtonImage.png" />
     <Content Include="Resources\Stickers\alhaitham-brain.png" />
     <Content Include="Resources\Stickers\Alhaitham-overwhelmed.png" />
